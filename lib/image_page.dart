@@ -84,7 +84,6 @@ class _ImagePageState extends State<ImagePage> {
         initialScale: PhotoViewComputedScale.covered,
         minScale: PhotoViewComputedScale.covered,
         maxScale: PhotoViewComputedScale.covered,
-        heroTag: '$imageId',
         loadingChild: const Center(
             child: CircularProgressIndicator(
           valueColor: AlwaysStoppedAnimation<Color>(Colors.white70),
