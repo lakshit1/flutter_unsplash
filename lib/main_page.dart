@@ -153,7 +153,7 @@ class _MainPageState extends State<MainPage> {
                     _loadImages(keyword: keyword),
                 autofocus: true,
               )
-            : const Text('Flutter Unsplash',
+            : const Text('Flutwalls',
                 style: TextStyle(color: Colors.black87)),
         actions: <Widget>[
           // either search oder clear button
