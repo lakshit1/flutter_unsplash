@@ -9,11 +9,11 @@ dependencies:
   # display images in staggered grid
   flutter_staggered_grid_view: ^0.3.0
   # open url for an image
-  url_launcher: ^5.2.5
+  url_launcher: ^5.4.1
   # image loading
   cached_network_image: ^2.0.0-rc.1
   # zoom images
-  photo_view: ^0.7.0
+  photo_view: ^0.9.0
   # format date
   date_format: ^1.0.8
 
