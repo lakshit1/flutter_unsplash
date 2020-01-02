@@ -16,8 +16,9 @@ tasks:
     touch /home/gitpod/.android/repositories.cfg
     export PATH=/home/gitpod/flutter/bin:$PATH
     export PATH=/home/gitpod/android-sdk/bin:$PATH
-    /home/gitpod/android-sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-28" "build-tools;28.0.3"
+    /home/gitpod/android-sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-29" "build-tools;29.0.2"
 vscode:
   extensions:
-    - Dart-Code.flutter@3.5.0:/kOacEWdiDRLyN/idUiM4A==
-    - Dart-Code.dart-code@3.6.0:OIKJQXmfWHoIMVCiWrcLsQ==
+    - Dart-Code.flutter@3.7.1:gujVOCgsbgoN2/po8X1tfA==
+    - Dart-Code.dart-code@3.7.1:3XT4xvtPoRdNasA5smNMiA==
+    - CoenraadS.bracket-pair-colorizer-2@0.0.29:Y00hDi6uxq/5AWl637owFQ==
