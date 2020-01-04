@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:unsplash_client/models.dart';
-import 'package:unsplash_client/widget/loading_indicator.dart';
+import 'package:flutwalls/models.dart';
+import 'package:flutwalls/widget/loading_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Bottom-sheet displaying info for a given [image].

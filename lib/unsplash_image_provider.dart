@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:unsplash_client/keys.dart';
-import 'package:unsplash_client/models.dart';
+import 'package:flutwalls/keys.dart';
+import 'package:flutwalls/models.dart';
 
 /// Helper class to interact with the Unsplash Api and provide [UnsplashImage].
 class UnsplashImageProvider {

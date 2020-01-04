@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:unsplash_client/main_page.dart';
+import 'package:flutwalls/main_page.dart';
 
 void main() => runApp(FlutterUnsplash());
 

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image/network.dart';
 import 'package:photo_view/photo_view.dart';
-import 'package:unsplash_client/models.dart';
-import 'package:unsplash_client/widget/info_sheet.dart';
+import 'package:flutwalls/models.dart';
+import 'package:flutwalls/widget/info_sheet.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:unsplash_client/unsplash_image_provider.dart';
+import 'package:flutwalls/unsplash_image_provider.dart';
 
 /// Screen for showing an individual [UnsplashImage].
 class ImagePage extends StatefulWidget {
@@ -80,7 +81,7 @@ class _ImagePageState extends State<ImagePage> {
 
   /// Returns PhotoView around given [imageId] & [imageUrl].
   Widget _buildPhotoView(String imageId, String imageUrl) => PhotoView(
-        imageProvider: NetworkImage(imageUrl),
+        imageProvider: NetworkImageWithRetry(imageUrl),
         initialScale: PhotoViewComputedScale.covered,
         minScale: PhotoViewComputedScale.covered,
         maxScale: PhotoViewComputedScale.covered,

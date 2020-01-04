@@ -1,4 +1,4 @@
-name: unsplash_client
+name: flutwalls
 description: Simple Flutter App showing trending images from Unsplash (https://unsplash.com/).
 version: 1.0.0+1
 
@@ -11,11 +11,12 @@ dependencies:
   # open url for an image
   url_launcher: ^5.4.1
   # image loading
-  cached_network_image: ^2.0.0-rc.1
+  cached_network_image: ^2.0.0
   # zoom images
   photo_view: ^0.9.0
   # format date
   date_format: ^1.0.8
+  flutter_image: ^3.0.0
 
 dev_dependencies:
   flutter_test:

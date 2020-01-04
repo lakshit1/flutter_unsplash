@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:unsplash_client/models.dart';
-import 'package:unsplash_client/unsplash_image_provider.dart';
-import 'package:unsplash_client/widget/image_tile.dart';
-import 'package:unsplash_client/widget/loading_indicator.dart';
+import 'package:flutwalls/models.dart';
+import 'package:flutwalls/unsplash_image_provider.dart';
+import 'package:flutwalls/widget/image_tile.dart';
+import 'package:flutwalls/widget/loading_indicator.dart';
 
 /// Screen for showing a collection of trending [UnsplashImage].
 class MainPage extends StatefulWidget {
