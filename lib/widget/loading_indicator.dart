@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flare_flutter/flare_actor.dart';
 
 /// A Widget wrapping a [CircularProgressIndicator] in [Center].
 class LoadingIndicator extends StatelessWidget {
-  final Color color;
-
-  const LoadingIndicator(this.color);
-
   @override
   Widget build(BuildContext context) => Center(
           child: Padding(
-        child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(color),
+        child: FlareActor(
+          "assets/Loading_indicator.flr",
+          alignment: Alignment.center,
+          fit: BoxFit.contain,
+          animation: "loading",
         ),
         padding: const EdgeInsets.all(16.0),
       ));

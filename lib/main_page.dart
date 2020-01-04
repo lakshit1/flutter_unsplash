@@ -132,7 +132,7 @@ class _MainPageState extends State<MainPage> {
                       // loading indicator at the bottom of the list
                       loadingImages
                           ? SliverToBoxAdapter(
-                              child: LoadingIndicator(Colors.grey[400]),
+                              child: LoadingIndicator(),
                             )
                           : null,
                       // filter null views
@@ -153,8 +153,7 @@ class _MainPageState extends State<MainPage> {
                     _loadImages(keyword: keyword),
                 autofocus: true,
               )
-            : const Text('Flutwalls',
-                style: TextStyle(color: Colors.black87)),
+            : const Text('Flutwalls', style: TextStyle(color: Colors.black87)),
         actions: <Widget>[
           // either search oder clear button
           keyword != null

@@ -1,5 +1,7 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image/network.dart';
+import 'package:image_downloader/image_downloader.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:flutwalls/models.dart';
 import 'package:flutwalls/widget/info_sheet.dart';
@@ -64,7 +66,6 @@ class _ImagePageState extends State<ImagePage> {
               icon: Icon(
                 Icons.info_outline,
                 color: Colors.white,
-
               ),
               tooltip: 'Image Info',
               onPressed: () => bottomSheetController = _showInfoBottomSheet()),
@@ -76,19 +77,67 @@ class _ImagePageState extends State<ImagePage> {
               ),
               tooltip: 'Open in Browser',
               onPressed: () => launch(image?.getHtmlLink())),
+          // Set wallpaper
+          /* IconButton(
+              icon: Icon(
+                Icons.wallpaper,
+                color: Colors.white,
+              ),
+              tooltip: 'Set wallpaper',
+              onPressed: () {
+                progressString =
+                    Wallpaper.ImageDownloadProgress(image?.getDownloadLink());
+                progressString.listen((data) {
+                  setState(() {
+                    res = data;
+                    downloading = true;
+                  });
+                  print("DataReceived: " + data);
+                }, onDone: () async {
+                  system = await Wallpaper.systemScreen();
+                  setState(() {
+                    downloading = false;
+                    system = system;
+                  });
+                  print("Task Done");
+                }, onError: (error) {
+                  setState(() {
+                    downloading = false;
+                  });
+                  print("Some Error");
+                });
+              }), */
+          // Download
+          IconButton(
+              icon: Icon(
+                Icons.file_download,
+                color: Colors.white,
+              ),
+              tooltip: 'Download',
+              onPressed: () async {
+                var imageD = await ImageDownloader.downloadImage(
+                    image?.getDownloadLink());
+                if (imageD == null) {
+                  return;
+                }
+              }),
         ],
       );
 
   /// Returns PhotoView around given [imageId] & [imageUrl].
   Widget _buildPhotoView(String imageId, String imageUrl) => PhotoView(
         imageProvider: NetworkImageWithRetry(imageUrl),
-        initialScale: PhotoViewComputedScale.covered,
+        initialScale: PhotoViewComputedScale.contained,
         minScale: PhotoViewComputedScale.covered,
         maxScale: PhotoViewComputedScale.covered,
         loadingChild: const Center(
-            child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.white70),
-        )),
+          child: FlareActor(
+            "assets/Loading_indicator.flr",
+            alignment: Alignment.center,
+            fit: BoxFit.contain,
+            animation: "loading",
+          ),
+        ),
       );
 
   @override
