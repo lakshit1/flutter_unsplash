@@ -58,7 +58,7 @@ class InfoSheet extends StatelessWidget {
                     _buildExifWidget(image.getExif()),
                     // filter null views
                   ].where((w) => w != null).toList()
-                : <Widget>[LoadingIndicator()]),
+                : <Widget>[LoadingIndicator(Colors.black26)]),
         /*decoration: new BoxDecoration(
             color: Colors.grey[50],
             borderRadius: new BorderRadius.only(
