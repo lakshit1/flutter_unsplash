@@ -5,6 +5,7 @@
 <img src="https://github.com/kollerlukas/Flutter_Unsplash/raw/master/assets/ic_launcher_android.png" alt="Icon"
 width="100">
 
+
 # Flutter Unsplash Client
 
 A simple Flutter app showing trending images from [Unsplash](https://unsplash.com/)
