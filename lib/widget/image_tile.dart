@@ -48,11 +48,8 @@ class ImageTile extends StatelessWidget {
         child: image != null
             ? Hero(
                 tag: '${image.getId()}',
-                child: _addRoundedCorners(CachedNetworkImage(
-                  imageUrl: image?.getSmallUrl(),
-                  placeholder: (context, url) =>
-                      _buildImagePlaceholder(image: image),
-                  errorWidget: (context, url, obj) => _buildImageErrorWidget(),
+                child: _addRoundedCorners(Image.network(
+                  image?.getSmallUrl(),
                   fit: BoxFit.cover,
                 )))
             : _buildImagePlaceholder(),
