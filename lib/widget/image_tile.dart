@@ -49,7 +49,7 @@ class ImageTile extends StatelessWidget {
             ? Hero(
                 tag: '${image.getId()}',
                 child: _addRoundedCorners(Image.network(
-                  image?.getSmallUrl(),
+                  image?.getThumbUrl(),
                   fit: BoxFit.cover,
                 )))
             : _buildImagePlaceholder(),
